@@ -34,9 +34,9 @@ import numpy as np
 # # 5. Inisialisasi Flask App
 # app = Flask(__name__)
 
-# @app.route('/')
-# def index():
-#     return 'Hello, World!'
+@app.route('/')
+def index():
+    return 'Hello, World!'
 
 # GANTI SEMUA BLOK DI ATAS DENGAN INI:
 try:
