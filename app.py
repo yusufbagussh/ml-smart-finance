@@ -34,10 +34,6 @@ import numpy as np
 # # 5. Inisialisasi Flask App
 # app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return 'Hello, World!'
-
 # GANTI SEMUA BLOK DI ATAS DENGAN INI:
 try:
     # 1. Load Model Kategori
@@ -59,6 +55,9 @@ except FileNotFoundError as e:
 # 5. Inisialisasi Flask App
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'Hello, World!'
 @app.route('/classify', methods=['POST'])
 def classify_transaction():
     try:
