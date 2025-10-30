@@ -58,6 +58,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return 'Hello, World!'
+
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "ok"}), 200
+
 @app.route('/classify', methods=['POST'])
 def classify_transaction():
     try:
